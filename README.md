@@ -18,10 +18,28 @@
 
         
     6. Запустить процесс sleep 10000 в фоновом режиме
+              pmn@pmn-ubuntu:~$ sleep 10000 &  
+              pmn@pmn-ubuntu:~$ jobs  dlya proverki 
+
+              
+
+         
     7. Вывести процесс sleep 10000 из фонового режима
+
+        pmn@pmn-ubuntu:~$ fg %1 sleep 10000
+
     8. Остановить процесс sleep 10000 (остановить, а не убить)
+                pmn@pmn-ubuntu:~$ killall sleep 10000
+
+           
     9. Вывести процесс sleep 10000 из сна
+                        pmn@pmn-ubuntu:~$ killall sleep 10000
+
+    
     10 Убить процесс sleep 10000
+
+        pmn@pmn-ubuntu:~$ kill 174172
+
     11. Вывести процессы, которые потребляют больше всех памяти
     В директории proc найти папку, соответсвующую процессу nginx. Найти
 
