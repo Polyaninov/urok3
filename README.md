@@ -74,8 +74,7 @@ pmn@pmn-ubuntu:~$ top -b -o +%MEM
 #!/usr/bin/ bash
 sudo apt -y update
 sudo apt -y install nginx
-sudo nginx -v
-echo 'Hello World' | sudo tee /var/www/html/index.html
+sudo nginx -vl
 sudo systemctl start nginx
 sudo systemctl status nginx
     
