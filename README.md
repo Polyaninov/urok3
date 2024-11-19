@@ -81,6 +81,16 @@ sudo systemctl start nginx
 sudo systemctl status nginx
     
     php-fpm
+
+
+#!/usr/bin/ bash
+sudo apt -y update
+sudo apt -y install php
+sudo php -v
+sudo apt install php-fpm -y
+sudo systemctl start php8.1-fpm
+sudo systemctl status php8.1-fpm
+    
     mariadb-server
 
     Написать скрипт, который будет проверять работоспособность сайта (сайт нужно указать как аргумент при запуске скрипта)
