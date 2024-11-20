@@ -54,7 +54,7 @@
  12. Запустить top и отсортировать процессы по
 
     объему используемой памяти;
-pmn@pmn-ubuntu:~$ top -b -o +%MEM
+       pmn@pmn-ubuntu:~$ top -b -o +%MEM
     
     времени работы
 
@@ -92,6 +92,15 @@ sudo systemctl start php8.1-fpm
 sudo systemctl status php8.1-fpm
     
     mariadb-server
+    
+#!/bin/bash
+sudo apt install update
+sudo apt install mariadb-server -y
+#sudo systemctl enable mariadb-server
+sudo systemctl start mariadb
+sudo systemctl status mariadb
+root_password=mypass
+    
 
     Написать скрипт, который будет проверять работоспособность сайта (сайт нужно указать как аргумент при запуске скрипта)
 
