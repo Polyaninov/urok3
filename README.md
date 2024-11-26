@@ -153,6 +153,22 @@ fi
     результат должен записываться в файл /var/log/process_stat.log в формате
 
 
+#!/bin/bash
+echo "This script monitors CPU and memory usage"
+
+  echo "Get using CPU and Memory"
+cpuUsage=$(top -bn1 | awk '/Cpu/ { print $2}')
+
+memUsage=$(free -m | awk '/Mem/{print $3}')
+
+Parametri=$(ps aux | awk '{print $1, $2, $3, $4, $11}')
+
+
+
+  echo "CPU Usage: $cpuUsage%">> /var/log/process_stat.log
+  echo "Memory Usage: $memUsage MB">> /var/log/process_stat.log
+  echo "Memory Usage: $Parametri">> /var/log/process_stat.log
+
 
 
 
